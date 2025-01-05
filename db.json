@@ -1,0 +1,126 @@
+{
+  "Users": [
+    {
+      "id": "1",
+      "fullName": "n1",
+      "email": "n1@123.com",
+      "password": "n123"
+    },
+    {
+      "id": "2",
+      "fullName": "n2",
+      "email": "n2@123.com",
+      "password": "n123"
+    },
+    {
+      "id": "5972",
+      "email": "n1@123.com",
+      "password": "n123"
+    },
+    {
+      "id": "5395",
+      "email": "n3@123.com",
+      "password": "n123"
+    },
+    {
+      "id": "08dc",
+      "email": "n3@123.com",
+      "password": "n"
+    },
+    {
+      "id": "6b28",
+      "email": "emp1@123.com",
+      "fullName": "emp1",
+      "password": "emp123"
+    },
+    {
+      "id": "a037"
+    },
+    {
+      "id": "16a6",
+      "fullName": "n6",
+      "email": "n6@123.com",
+      "password": "n123"
+    },
+    {
+      "id": "5a23",
+      "fullName": "emp1",
+      "email": "emp1@123.com",
+      "password": "emp1"
+    }
+  ],
+  "data":[
+    {
+      "img": "assets/images/p1.jpg",
+      "name": "HAWAIIAN",
+      "desc": "Tomato sauce, mozzarella, ham & pineapple",
+      "price": "$17.75"
+    },
+    {
+      "img": "assets/images/p2.jpg",
+      "name": "CHICKEN",
+      "desc": "Tomato sauce, mozzarella, chicken, pineapple* & bbq sauce",
+      "price": "$16.8"
+    },{
+      "img": "assets/images/p3.jpg",
+      "name": "SALAMI",
+      "desc": "Tomato sauce, mozzarella & mild salami",
+      "price": "$15.55"
+    },{
+      "img": "assets/images/p4.jpg",
+      "name": "ORIGINAL",
+      "desc": "Tomato sauce, mozzarella & oregano",
+      "price": "$18.95"
+    },
+    {
+      "img": "assets/images/p1.jpg",
+      "name": "HAWAIIAN",
+      "desc": "Tomato sauce, mozzarella, ham & pineapple",
+      "price": "$17.75"
+    },
+    {
+      "img": "assets/images/p2.jpg",
+      "name": "CHICKEN",
+      "desc": "Tomato sauce, mozzarella, chicken, pineapple* & bbq sauce",
+      "price": "$16.8"
+    },{
+      "img": "assets/images/p3.jpg",
+      "name": "SALAMI",
+      "desc": "Tomato sauce, mozzarella & mild salami",
+      "price": "$15.55"
+    },{
+      "img": "assets/images/p4.jpg",
+      "name": "ORIGINAL",
+      "desc": "Tomato sauce, mozzarella & oregano",
+      "price": "$18.95"
+    },
+    {
+      "img": "assets/images/p1.jpg",
+      "name": "HAWAIIAN",
+      "desc": "Tomato sauce, mozzarella, ham & pineapple",
+      "price": "$17.75"
+    },
+    {
+      "img": "assets/images/p2.jpg",
+      "name": "CHICKEN",
+      "desc": "Tomato sauce, mozzarella, chicken, pineapple* & bbq sauce",
+      "price": "$16.8"
+    },{
+      "img": "assets/images/p3.jpg",
+      "name": "SALAMI",
+      "desc": "Tomato sauce, mozzarella & mild salami",
+      "price": "$15.55"
+    },{
+      "img": "assets/images/p4.jpg",
+      "name": "ORIGINAL",
+      "desc": "Tomato sauce, mozzarella & oregano",
+      "price": "$18.95",
+      "prodDetails":{
+        "Desc":"123"
+        
+      }
+    }
+  ]
+  
+ 
+}

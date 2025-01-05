@@ -1,0 +1,44 @@
+
+.button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.remove {
+  margin: -8px 73px 0px 200px;
+}
+
+
+@media screen and (max-width: 430px) {
+  .remove {
+    margin: -8px 73px 0px 110px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .remove {
+    margin: -8px 73px 0px 70px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .remove {
+    margin: -8px 73px 0px 40px;
+  }
+}
+
+/* .sticky-checkout {
+  position: fixed;
+  top: 53%; 
+  left: 65%;
+  transform: translateY(-50%);
+} */

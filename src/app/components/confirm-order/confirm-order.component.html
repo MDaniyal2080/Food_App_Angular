@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+    <div class="spinner-grow text-danger" role="status"></div>
+</div>
+
+<div class="container mt-5 pt-5 text-center text-light " style="height: 100vh;" *ngIf="!loader">
+    <div class="jumbotron f">
+        <h1 class="display-4 f">Thank you for your order!</h1>
+        <p class="loading-text">Your order is in process...</p>
+        <p class="loading-text">Rider is on the way!</p>
+        <div class="loading-line"></div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

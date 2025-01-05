@@ -1,0 +1,14 @@
+<div class="container mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form>
+                <div class="input-group ">
+                    <input type="text" class="form-control bg-light" placeholder="Search for food..."
+                        [(ngModel)]="searchItem" [ngModelOptions]="{standalone: true}" (change)="search()"
+                        (ngModelChange)="search()">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

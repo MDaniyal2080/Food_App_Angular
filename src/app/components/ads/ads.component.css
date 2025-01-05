@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+
+.fancy {
+  font-family: 'Arizonia', 'cursive';
+  color: rgb(255, 255, 255);
+  size: 200%;
+}

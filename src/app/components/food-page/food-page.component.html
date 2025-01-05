@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+    <div class="spinner-grow text-danger" role="status"></div>
+</div>
+
+<div *ngIf="!loader">
+    <div *ngIf="food.id" class="container corner mt-5 mb-5" style="background-color: white;">
+        <img [src]="food.img" [alt]="food.name" class="image " />
+        <div class="details f corner ">
+            <div class="pdx-4 ">
+                <div class="header">
+                    <span class="name text-danger">
+                        {{food.name}}
+                    </span>
+                </div>
+                <div class="cook-time">
+                    <span>
+                        Description:<strong> {{food.desc}}</strong>
+                    </span>
+                </div>
+                <div class="cook-time">
+                    <span>
+                        Time to cook: <strong>{{food.cooktime}}</strong>
+                    </span>
+                </div>
+                <div class="cook-time">
+                    <span>
+                        Time to deliver: <strong>{{food.deliverytime}}</strong>
+                    </span>
+                </div>
+                <div class="price">
+                    <span>
+                        {{food.price | currency}}
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-outline-dark m-2" (click)="addToCart()">Add to Cart</button>
+            <button class="btn btn-outline-dark m-2" routerLink="/allfood/search">Back</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

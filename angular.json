@@ -25,7 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.css",
+              {
+                "input": "src/styles.css",
+                "bundleName": "external-styles",
+                "inject": false
+              }
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -89,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -96,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ea12e279-94ad-4b78-93c3-08c4e3f39906"
   }
 }

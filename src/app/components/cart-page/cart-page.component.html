@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+  <div class="spinner-grow text-danger" role="status"></div>
+</div>
+
+<div class="container mt-5 mb-5 mb-5 text-white " *ngIf="!loader">
+  <h1 class="text-center "> Cart</h1>
+  <div *ngIf="cart.items.length===0 || cartItem2.length===0" class="mt-3 c">
+    <h4 >Your cart is currently empty.</h4>
+    <button routerLink="/allfood/search" class="btn btn-outline-light m-2">Add items</button>
+  </div>
+
+  <div *ngIf="cart.items.length>0 ||cartItem2.length>0">
+    <div class="row d-flex">
+      <div class="col-md-8">
+        <div class="card mb-3 mt-2" *ngFor="let cartItem of cart.items">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{cartItem.food.img}}" class="card-img img-fluid " alt="{{cartItem.food.name}}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title "><a routerLink="/food/{{cartItem.food.id}}" style="text-decoration: none;"
+                    class="text-danger fw-bolder">{{cartItem.food.name}}</a></h3>
+                <p class="card-text">Price: {{ cartItem.food.price * cartItem.quantity | currency}}$</p>
+                <div class="d-flex align-items-center text-center ">
+                  <p style="margin: 10px 15px 12px 0px">Quantity: </p>
+                  <button class="btn btn-sm btn-dark " (click)="decrease(cartItem)">-</button>
+                  <span class="m-2">{{ cartItem.quantity }}</span>
+                  <button class="btn btn-sm btn-dark " (click)="increase(cartItem)">+</button>
+                  <div class="">
+                    <button class="btn btn-outline-danger button ms-5"
+                      (click)="removeFromCart(cartItem)">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 mt-2" *ngFor="let item of cartItem2; let i = index">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/images/customPizza3.jpg" class="card-img img-fluid" alt="customPizza">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title"><a style="text-decoration: none;" class="text-danger fw-bolder">Custom Pizza</a>
+                </h3>
+                <div class="d-flex w-100">
+               <div class="w-50">
+                  <b>Flavor:</b> {{ item.pizza.flavor }}
+                  <br>
+                  <b>Size:</b> {{ item.pizza.size }}
+                  <br>
+                   <b>Crust:</b> {{ item.pizza.crust }}
+                  <br>
+                  <b>Extras:</b> {{ item.pizza.extras }}
+                  <br>
+                  <b>Quantity:</b> {{ item.quantity }}
+                  <b>Price:</b> ${{ item.price }} 
+                </div>
+                <div class="w-25" style="margin-top: 135px;">
+                  <button class="btn btn-outline-danger button ms-5"
+                    (click)="removeFromCart2(i)">Remove</button>
+                  </div>
+                </div>
+                  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mt-2">
+          <div class="card-body">
+            <h2 class="text-danger">Total</h2>
+            <p class="card-text"><b>Total Items:</b> {{cartQuantity+totalQuantity}}</p>
+            <p class="card-text"><b>Total Price:</b> {{cart.totalPrice+totalPriceSum}}$</p>
+            <button class="btn btn-outline-dark button" (click)="CartRemove()">Checkout</button>
+          </div>
+        </div>
+        <button class="btn btn-outline-light form-control mt-2 button" routerLink="/allfood/search">Add More</button>
+      </div>
+    </div>
+  </div>
+</div>

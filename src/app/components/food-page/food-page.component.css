@@ -1,0 +1,256 @@
+
+
+.corner {
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.container>* {
+  min-width: 25rem;
+  max-width: 40rem;
+}
+
+.image {
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: cover;
+  height: 35rem;
+  margin: 1rem;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  padding: 2rem;
+  color: black;
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.cook-time span {
+  padding: 0.6rem 2rem 0.6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+}
+
+.cook-time {
+  margin-top: 1rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
+}
+
+.price::before {
+  content: "Price: ";
+  color: darkgrey;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+}
+
+.pdx-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+@media screen and (max-width: 430px) {
+  .image {
+    width: 80%;
+    height: 80%;
+  }
+
+  .container>* {
+    min-width: 22rem;
+    max-width: 40rem;
+  }
+
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    color: black;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 0;
+    border-radius: 10rem;
+  }
+
+  .pdx-4 {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .cook-time span {
+    padding: 0.4rem 1.8rem 0.4rem 0;
+    border-radius: 10rem;
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.6rem;
+    margin: 0.8rem 0.8rem 0.8rem 0;
+    color: green;
+  }
+
+  .corner {
+    border: 1px solid transparent;
+    border-radius: 40px;
+  }
+
+  .cook-time {
+    margin-top: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .image {
+    width: 50%;
+    height: 50%;
+  }
+
+  .container>* {
+    min-width: 20rem;
+    max-width: 40rem;
+  }
+
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    color: black;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 10rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+
+  .cook-time span {
+    padding: 0.3rem 1.7rem 0.3rem 0;
+    border-radius: 10rem;
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    margin: 0.6rem 0.6rem 0.6rem 0;
+    color: green;
+  }
+
+  .corner {
+    border: 1px solid transparent;
+    border-radius: 35px;
+  }
+
+  .cook-time {
+    margin-top: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .image {
+    width: 50%;
+    height: 50%;
+  }
+
+  .container>* {
+    min-width: 18rem;
+    max-width: 40rem;
+  }
+
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    color: black;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0;
+    border-radius: 10rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
+  .cook-time span {
+    padding: 0.2rem 1.6rem 0.2rem 0;
+    border-radius: 10rem;
+    font-size: 0.7rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    color: green;
+  }
+
+  .corner {
+    border: 1px solid transparent;
+    border-radius: 30px;
+  }
+
+  .cook-time {
+    margin-top: 0.1rem;
+  }
+}
+
+/* button:hover{
+  opacity: 0.9;
+  cursor: pointer;
+} */

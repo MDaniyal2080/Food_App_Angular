@@ -1,0 +1,89 @@
+ 
+
+<app-navbar></app-navbar>
+
+ <div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+  <div class="spinner-grow text-danger" role="status"></div>
+</div>
+<div *ngIf="!loader">
+  <div class="container corner mt-5 mb-5" style="background-color: white;">
+    <img src="assets/images/customPizza3.jpg" class="image"/>
+    <div class="details f card corner ">
+      <div class="px-4  ">
+        <div class="header">
+          <span class="name text-danger">
+            <h1 class="mb-4">Build Your Custom Pizza</h1>
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>
+            <mat-form-field appearance="outline" class="w-100 ">
+              <mat-label>Select Size</mat-label>
+              <mat-select [(value)]="selectedPizza.size" (selectionChange)="calculatePrice()" >
+                <mat-option value="Small">Small (8.00$)</mat-option>
+                <mat-option value="Medium">Medium (10.00$)</mat-option>
+                <mat-option value="Large">Large (12.00$)</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>
+            <mat-form-field appearance="outline" class="w-100 ">
+              <mat-label>Select Flavor</mat-label>
+              <mat-select [(value)]="selectedPizza.flavor" (selectionChange)="calculatePrice()" >
+                <mat-option value="Cheese">Cheese (10.00$)</mat-option>
+                <mat-option value="Pepperoni">Pepperoni (8.00$)</mat-option>
+                <mat-option value="Vegetarian">Vegetarian (8.00$)</mat-option>
+                <mat-option value="Tikka">Tikka (10.00$)</mat-option>
+                <mat-option value="Margherita">Margherita (9.00$)</mat-option>
+                <mat-option value="Creamy">Creamy (9.00$)</mat-option>
+                <mat-option value="BBQ">BBQ (10.00$)</mat-option>
+                <mat-option value="Fajita">Fajita (8.00$)</mat-option>
+                <mat-option value="Veggie">Veggie (6.00$)</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>
+            <mat-form-field appearance="outline" class="w-100 ">
+              <mat-label>Select Crust</mat-label>
+              <mat-select [(value)]="selectedPizza.crust" (selectionChange)="calculatePrice()" >
+                <mat-option value="Thin">Thin (2.00$)</mat-option>
+                <mat-option value="Thick">Thick (4.00$)</mat-option>
+                <mat-option value="Stuffed">Stuffed (5.00$)</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>
+            <mat-form-field appearance="outline" class="w-100 ">
+              <mat-label>Select Extras</mat-label>
+              <mat-select [(value)]="selectedPizza.extras" (selectionChange)="calculatePrice()" multiple>
+                <mat-option value="Mushrooms">Mushrooms (2.00$)</mat-option>
+                <mat-option value="Onions">Onions (2.00$)</mat-option>
+                <mat-option value="Chicken">Chicken (5.00$)</mat-option>
+                <mat-option value="Sauces">Sauces (4.00$)</mat-option>
+                <mat-option value="Tomatos">Tomatos (2.00$)</mat-option>
+                <mat-option value="Cucumber">Cucumber (2.00$)</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </span>
+        </div>
+        <div class="price">
+          <span>
+            <label for="quantity" class="form-label">Quantity:</label>
+            <input type="number" id="quantity" class="form-control" [(ngModel)]="quantity" (change)="calculatePrice()">
+            <br>
+            <p>Total Price:<p class="text-danger"> ${{ totalPrice }} </p>
+          </span>
+        </div>
+      </div>
+      <button class="btn btn-outline-dark m-3" (click)="addToCart()">Add to Cart</button>
+      <button class="btn btn-outline-dark m-3" routerLink="/home">Back</button>
+    </div>
+  </div>
+</div>
+

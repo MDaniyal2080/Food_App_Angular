@@ -1,0 +1,83 @@
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+    <div class="spinner-grow text-danger" role="status"></div>
+</div>
+
+<section class="ftco-section " *ngIf="!loader">
+    <div class="container">
+        <div class="row justify-content-center">
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4 ">Sign up</h3>
+                            </div>
+                            <div class="w-100">
+                                <p class="social-media d-flex justify-content-end">
+                                    <a href="#"
+                                        class="social-icon d-flex align-items-center justify-content-center"><span
+                                            class="fab fa-facebook text-dark"></span></a>
+                                    <a href="#"
+                                        class="social-icon d-flex align-items-center justify-content-center"><span
+                                            class="fab fa-twitter text-dark"></span></a>
+                                    <a href="#"
+                                        class="social-icon d-flex align-items-center justify-content-center"><span
+                                            class="fab fa-instagram text-dark"></span></a>
+                                    <a href="#"
+                                        class="social-icon d-flex align-items-center justify-content-center"><span
+                                            class="fab fa-linkedin text-dark"></span></a>
+                                </p>
+
+                            </div>
+                        </div>
+                        <form action="#" class="signin-form" [formGroup]="signup" (ngSubmit)="onSubmit(signup)">
+                            <div class="form-group mt-3">
+                                <input formControlName="fullName" type="text" class="form-control" required
+                                    placeholder="Full Name">
+                                <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)"
+                                    class="block p-error text-danger">
+                                    <div *ngIf="fullName.errors?.['required']">*Name is required</div>
+                                    <div *ngIf="fullName.errors?.['pattern']">*Name is invalid</div>
+                                </small>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input formControlName="email" type="email" class="form-control" required
+                                    placeholder="email">
+                                <small *ngIf="Email.invalid && (Email.dirty || Email.touched)"
+                                    class="block p-error text-danger">
+                                    <div *ngIf="Email.errors?.['required']">*Email is required</div>
+                                    <div *ngIf="Email.errors?.['email']">*Email should be valid</div>
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <input formControlName="password" id="password-field" type="password"
+                                    class="form-control" required placeholder="password">
+                                <span toggle="#password-field"
+                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <!-- <small *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+                                    class="block p-error text-danger">
+                                    <div *ngIf="Password.errors?.['required']">*Password is required</div>
+                                </small> -->
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="form-control btn btn-dark">Sign up</button>
+                                <span class="mt-2">Already have account? <a routerLink="/login"
+                                        class="link-primary">LOGIN</a></span>
+
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

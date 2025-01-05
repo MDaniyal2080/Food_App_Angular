@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<header class=" py-3 ">
+    <div class="container ">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder text-white ">Order Now</h1>
+            <app-search></app-search>
+        </div>
+    </div>
+</header>
+
+<div *ngIf="foods.length===0">
+    <div class="container d-flex justify-content-center  ">
+        <div class=" text-white text-center mt-2">
+            <h1 class="">No food found</h1>
+            <button class="btn btn-outline-light " routerLink="/allfood/search">Reset Search</button>
+        </div>
+        <div class="vh-100"> </div>
+    </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center" style="height: 100vh;" *ngIf="loader">
+    <div class="spinner-grow text-danger" role="status"></div>
+</div>
+
+<ul *ngIf="!loader">
+    <li *ngFor="let food of foods" class="c corner m-4 " style="background-color: white;">
+        <a routerLink="/food/{{food.id}}">
+            <img [src]="food.img" [alt]="food.name" />
+            <div class="content">
+                <div class="text-center">
+                    <h4 class="fw-bolder f text-danger">{{ food.name }}</h4>
+                    <p class="text-dark ">{{ food.desc }}</p>
+                    <span class="text-dark fw-bolder">PRICE: {{ food.price }}$</span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<app-footer></app-footer>

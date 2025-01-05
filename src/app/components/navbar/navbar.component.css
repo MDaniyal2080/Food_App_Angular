@@ -1,0 +1,12 @@
+
+.nv {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
